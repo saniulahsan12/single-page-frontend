@@ -1,0 +1,28 @@
+{
+  "name": "single-page-frontend",
+  "version": "1.0.0",
+  "description": "single-page-frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass src/assets/scss -o src/assets/css"
+  },
+  "author": "Saniul Ahsan",
+  "license": "ISC",
+  "homepage": "https://github.com/saniulahsan12/single-page-frontend",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1",
+    "node-sass": "^4.12.0"
+  },
+  "dependencies": {
+    "animate.css": "^3.7.2",
+    "bootstrap": "^4.3.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.4.1"
+  }
+}

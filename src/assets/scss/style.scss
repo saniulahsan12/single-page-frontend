@@ -1,0 +1,314 @@
+$color1: #ffffff;
+$color2: #288DC1;
+$color3: #003056;
+$color4: #F6F9FC;
+$color5: #f1f1f1;
+
+html, body {
+  background: $color1;
+  font-family: 'Open Sans';
+}
+
+#parent {
+  position: relative;
+  overflow: hidden;
+  &:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 138%;
+    background: $color2;
+    right: -65%;
+    top: -12%;
+    -webkit-transform: rotate(-145deg);
+    -ms-transform: rotate(-145deg);
+    transform: rotate(-145deg);
+    border-radius: 15px;
+  }
+}
+
+.site-header-logo {
+  width: 55px;
+  height: 43px;
+}
+
+@mixin btn-transparent {
+	border: 1px solid $color2;
+  color: $color2 !important;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 25px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  background-color: transparent !important;
+  letter-spacing: 1px;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  margin-left: 16px;
+}
+
+.transparent-btn {
+	@include btn-transparent;
+  &:hover, &:active, &:focus {
+    @include btn-transparent;
+  }
+}
+
+.navbar {
+  padding: 80px 0;
+}
+
+.navbar-nav .nav-link {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: $color3;
+  margin-left: 16px;
+  margin-right: 0px;
+  height: 100%;
+}
+
+.navbar-toggler {
+  outline: none !important;
+  border: 0;
+  cursor: pointer;
+}
+
+.navbar-toggler-icon {
+  font-size: 24px;
+  line-height: 32px;
+  cursor: pointer;
+  z-index: 1;
+  color: $color2;
+}
+
+.collapsing {
+  -webkit-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+.no-transition {
+  -webkit-transition: height 0 !important;
+  -moz-transition: height 0 !important;
+  -ms-transition: height 0 !important;
+  -o-transition: height 0 !important;
+  transition: height 0 !important;
+}
+
+.site-title {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 42px;
+  line-height: 46px;
+  letter-spacing: -1px;
+  text-align: left;
+  color: $color3;
+  margin-top: 80px;
+}
+
+.site-desc {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  color: $color3;
+  text-align: justify;
+}
+
+@mixin btn-filled {
+	background-color: $color2 !important;
+  border-radius: 25px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: -1px;
+  color: $color1;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 45px;
+  padding-right: 45px;
+  margin-top: 29px;
+  letter-spacing: 1px;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.filled-btn {
+  @include btn-filled;
+  &:hover, &:active, &:focus {
+    @include btn-filled;
+  }
+}
+
+.btn:hover {
+  opacity: .7 !important;
+}
+
+.navbar-nav .nav-link:hover, .social:hover {
+  opacity: .5;
+}
+
+.social-wrapper {
+  margin-top: 220px;
+}
+
+.social {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 32px;
+  color: $color3;
+  margin-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.social-outer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .navbar-toggler-icon {
+    color: $color2 !important;
+    position: relative;
+    cursor: pointer;
+  }
+  #collapsibleNavbar {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(0, 48, 86, 0.95);
+    overflow-x: hidden;
+    height: 100% !important;
+    ul {
+      position: relative;
+      top: 92px;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+      a {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: normal;
+        color: $color1;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: left;
+        padding-left: 25px;
+        padding-right: 18px;
+        &:hover, &:focus {
+          color: $color5;
+        }
+      }
+    }
+    .closebtn {
+      position: absolute;
+      top: 43px;
+      right: 38px;
+      font-size: 27px;
+      line-height: 31px;
+      color: $color1;
+    }
+  }
+  .not-mobile {
+    display: none;
+  }
+  .social-wrapper {
+    z-index: 1;
+    &.show-index {
+      z-index: 3;
+      a i {
+        color: $color1;
+      }
+    }
+  }
+}
+
+@media (max-width: 736px) {
+  .navbar-toggler-icon {
+    color: $color4 !important;
+    position: relative;
+    cursor: pointer;
+  }
+  .site-title {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .site-desc {
+    font-size: 14px;
+    line-height: 22px;
+  }
+	@mixin btn-filled-sub {
+		font-size: 14px;
+    line-height: 19px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 17px;
+    padding-right: 17px;
+    margin-top: 20px;
+    line-height: 11px;
+	}
+  .filled-btn {
+    @include btn-filled-sub;
+    &:hover, &:active, &:focus {
+      @include btn-filled-sub;
+    }
+  }
+  .social-wrapper {
+    margin-top: 230px !important;
+  }
+  .social {
+    font-size: 18px;
+  }
+  #parent:after {
+    width: 76% !important;
+    height: 102% !important;
+    right: -81% !important;
+    top: -74% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #parent:after {
+    width: 74%;
+    height: 105%;
+    right: -59%;
+    top: 3%;
+  }
+  .navbar {
+    padding: 48px 0;
+  }
+  .social-wrapper {
+    margin-top: 345px;
+  }
+  .site-title {
+    margin-top: 48px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 568px) and (orientation: landscape) {
+  .social-outer {
+    position: relative;
+  }
+}
